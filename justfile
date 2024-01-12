@@ -1,7 +1,7 @@
 # use Powershell
 set shell := ["powershell.exe", "-c"]
 
-builddir := "dist"
+builddir := ".dist"
 zipFile := "YoutubeShortsRemover.zip"
 
 default: ensure-path build
