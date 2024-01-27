@@ -17,3 +17,6 @@ build:
 
 clean:
     Remove-Item {{ builddir }}/{{ zipFile }}
+
+run:
+    web-ext run
