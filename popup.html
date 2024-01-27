@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section class="popup">
+      <h1>Youtube Shorts Remover</h1>
+
+      <div class="group">
+        <input name="homepage" type="checkbox" checked />
+        <label for="homepage">Home</label>
+      </div>
+
+      <div class="group">
+        <input name="searchpage" type="checkbox" checked />
+        <label for="searchpage">Search results</label>
+      </div>
+
+      <div class="group">
+        <input name="sidebar" type="checkbox" checked />
+        <label for="sidebar">Sidebar link</label>
+      </div>
+
+      <button title="Open extension in new tab">
+        <img src="icons/external.svg" alt="An arrow to top right icon" />
+        <label> Open in new tab </label>
+      </button>
+    </section>
+    <script src="popup.js"></script>
+  </body>
+</html>
