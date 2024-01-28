@@ -22,7 +22,6 @@
     searchpage && SEARCH_SHORTS_RENDERER,
     sidebar && SHORTS_SIDEBAR_BUTTON,
   ].filter((x) => x);
-  console.log(removeList);
 
   var mutationObserver = new MutationObserver(() => {
     var richRendererSections = document.querySelectorAll(removeList.join(","));
