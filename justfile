@@ -13,7 +13,7 @@ ensure-path:
     
 build:
     # Get-ChildItem -Path manifest.json, index.js, icons/ytb-32x32.png, icons/ytb-48x48.png, icons/ytb-96x96.png, icons/ytb-144x144.png | Compress-Archive -DestinationPath {{ builddir }}/{{ zipFile }}
-    Compress-Archive -Path * -DestinationPath {{ builddir }}/{{ zipFile }} -Force
+    Compress-Archive -Path * -DestinationPath {{ builddir }}/{{ zipFile }} -Force -CompressionLevel NoCompression
 
 clean:
     Remove-Item {{ builddir }}/{{ zipFile }}
