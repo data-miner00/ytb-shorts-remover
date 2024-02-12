@@ -39,7 +39,7 @@ h1 {
   margin-bottom: 5px;
 }
 
-button {
+.links {
   display: flex;
   place-items: center;
   background: none;
@@ -48,15 +48,16 @@ button {
   cursor: pointer;
   color: inherit;
   gap: 4px;
+  margin-bottom: 4px;
 }
 
-button svg,
-button label {
+.links svg,
+.links label {
   display: block;
   color: inherit;
 }
 
-button svg {
+.links svg {
   width: 16px;
   height: 16px;
   color: inherit;

@@ -23,7 +23,7 @@ checkboxes.forEach((entries) => {
   });
 });
 
-const button = document.querySelector("button");
+const button = document.querySelector("button#extension-link");
 
 button.addEventListener("click", () => openInNewTab());
 

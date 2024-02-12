@@ -8,6 +8,7 @@
   const PAGE_MANAGER = "ytd-page-manager#page-manager";
   const MINI_SIDEBAR = "ytd-mini-guide-renderer";
   const SIDEBAR_BURGER_TOGGLE = "yt-icon-button#guide-button";
+
   const HOMEPAGE_CHECKBOX = "homepage";
   const SEARCHPAGE_CHECKBOX = "searchpage";
   const SIDEBAR_CHECKBOX = "sidebar";
@@ -34,8 +35,8 @@
   ].filter((x) => x);
 
   var mutationObserver = new MutationObserver(() => {
-    var richRendererSections = document.querySelectorAll(removeList.join(","));
-    richRendererSections.forEach((element) => element.remove());
+    var sectionsToBeRemoved = document.querySelectorAll(removeList.join(","));
+    sectionsToBeRemoved.forEach((element) => element.remove());
   });
 
   mutationObserver.observe(document.body, { subtree: true, childList: true });
