@@ -4,16 +4,23 @@ set shell := ["powershell.exe", "-c"]
 builddir := ".dist"
 zipFile := "YoutubeShortsRemover.zip"
 
-default: ensure-path build
+default: ensure-path prebuild build postbuild
 
 ensure-path:
     if (-Not (Test-Path {{ builddir }})) { \
         New-Item {{ builddir }} -ItemType Directory \
     }
-    
+
+prebuild:
+    Copy-Item -Path .\icons\* -Destination . -PassThru
+    ./scripts/Replace-ImgPaths.ps1
+
 build:
-    # Get-ChildItem -Path manifest.json, index.js, icons/ytb-32x32.png, icons/ytb-48x48.png, icons/ytb-96x96.png, icons/ytb-144x144.png | Compress-Archive -DestinationPath {{ builddir }}/{{ zipFile }}
     Compress-Archive -Path * -DestinationPath {{ builddir }}/{{ zipFile }} -Force -CompressionLevel NoCompression
+
+postbuild:
+    ./scripts/Remove-ImgFiles.ps1
+    ./scripts/Revert-Manifest.ps1
 
 clean:
     Remove-Item {{ builddir }}/{{ zipFile }}
