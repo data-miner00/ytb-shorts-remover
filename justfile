@@ -13,14 +13,14 @@ ensure-path:
 
 prebuild:
     Copy-Item -Path .\icons\* -Destination . -PassThru
-    ./scripts/Replace-ImgPaths.ps1
+    ./scripts/Replace-ImgPaths.ps1 -Manifest manifest.json
 
 build:
     Compress-Archive -Path * -DestinationPath {{ builddir }}/{{ zipFile }} -Force -CompressionLevel NoCompression
 
 postbuild:
     ./scripts/Remove-ImgFiles.ps1
-    ./scripts/Revert-Manifest.ps1
+    ./scripts/Revert-Manifest.ps1 -Manifest manifest.json
 
 clean:
     Remove-Item {{ builddir }}/{{ zipFile }}

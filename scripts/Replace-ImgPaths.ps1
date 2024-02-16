@@ -1,7 +1,10 @@
-$manifest = "manifest.json"
+param (
+    [Parameter(Mandatory=$true)]
+    [string] $Manifest
+)
 
-Copy-Item -Path .\$manifest -Destination .\$manifest.bak
-(Get-Content $manifest) `
+Copy-Item -Path .\$Manifest -Destination .\$Manifest.bak
+(Get-Content $Manifest) `
     -Replace 'icons/', '' `
     -Replace 'second regex', 'second replacement' |
-  Out-File $manifest
+  Out-File $Manifest
