@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <section class="popup">
+    <section id="main-section">
       <h1>Youtube Shorts Remover</h1>
 
       <div class="group">
@@ -51,6 +51,18 @@
         <label> Open in new tab </label>
       </button>
     </section>
+
+    <section id="search-section">
+      <form name="youtube-search-form">
+        <input
+          type="text"
+          name="youtube-search-input"
+          placeholder="Search Youtube"
+        />
+        <button type="submit">Search</button>
+      </form>
+    </section>
+
     <script src="popup.js" type="text/javascript"></script>
   </body>
 </html>
