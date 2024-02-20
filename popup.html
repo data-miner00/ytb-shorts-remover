@@ -4,64 +4,74 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <title>Youtube Shorts Remover</title>
   </head>
   <body>
-    <section id="main-section">
+    <div aria-hidden="true"></div>
+    <main>
       <h1>Youtube Shorts Remover</h1>
 
-      <div class="group">
-        <input name="homepage" type="checkbox" checked />
-        <label for="homepage">Home</label>
-      </div>
+      <section id="main-section">
+        <div id="toggle-container">
+          <h2>Disable Feature</h2>
 
-      <div class="group">
-        <input name="searchpage" type="checkbox" checked />
-        <label for="searchpage">Search results</label>
-      </div>
+          <div class="group">
+            <input name="homepage" type="checkbox" checked />
+            <label for="homepage">Home</label>
+          </div>
 
-      <div class="group">
-        <input name="sidebar" type="checkbox" checked />
-        <label for="sidebar">Sidebar link</label>
-      </div>
+          <div class="group">
+            <input name="searchpage" type="checkbox" checked />
+            <label for="searchpage">Search results</label>
+          </div>
 
-      <div class="group">
-        <input name="sidebar-all" type="checkbox" checked />
-        <label for="sidebar-all">Whole sidebar</label>
-      </div>
+          <div class="group">
+            <input name="sidebar" type="checkbox" checked />
+            <label for="sidebar">Sidebar link</label>
+          </div>
 
-      <a
-        class="links"
-        href="https://www.youtube.com/playlist?list=WL"
-        title="Open watch later list in new tab"
-      >
-        <svg>
-          <use href="icons/external.svg#external"></use>
-        </svg>
-        <label>Watch Later</label>
-      </a>
+          <div class="group">
+            <input name="sidebar-all" type="checkbox" checked />
+            <label for="sidebar-all">Whole sidebar</label>
+          </div>
+        </div>
 
-      <button
-        class="links"
-        id="extension-link"
-        title="Open extension in new tab"
-      >
-        <svg>
-          <use href="icons/external.svg#external"></use>
-        </svg>
-        <label> Open in new tab </label>
-      </button>
-    </section>
+        <div id="links-container">
+          <a
+            class="links"
+            href="https://www.youtube.com/playlist?list=WL"
+            title="Open watch later list in new tab"
+          >
+            <svg>
+              <use href="icons/external.svg#external"></use>
+            </svg>
+            <label>Watch Later</label>
+          </a>
 
-    <section id="search-section">
-      <form name="youtube-search-form">
-        <input
-          type="text"
-          name="youtube-search-input"
-          placeholder="Search Youtube"
-        />
-        <button type="submit">Search</button>
-      </form>
-    </section>
+          <button
+            class="links"
+            id="extension-link"
+            title="Open extension in new tab"
+          >
+            <svg>
+              <use href="icons/external.svg#external"></use>
+            </svg>
+            <label> Open in new tab </label>
+          </button>
+        </div>
+      </section>
+
+      <section id="search-section">
+        <form name="youtube-search-form">
+          <input
+            type="text"
+            name="youtube-search-input"
+            placeholder="Search Youtube"
+          />
+          <button type="submit">Search</button>
+        </form>
+      </section>
+    </main>
 
     <script src="popup.js" type="text/javascript"></script>
   </body>
