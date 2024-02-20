@@ -1,10 +1,10 @@
 param (
     [Parameter(Mandatory=$true)]
-    [string] $Manifest
+    [string] $File
 )
 
-Copy-Item -Path .\$Manifest -Destination .\$Manifest.bak
-(Get-Content $Manifest) `
+Copy-Item -Path .\$File -Destination .\$File.bak
+(Get-Content $File) `
     -Replace 'icons/', '' `
     -Replace 'second regex', 'second replacement' |
-  Out-File $Manifest
+  Out-File $File -Encoding utf8
