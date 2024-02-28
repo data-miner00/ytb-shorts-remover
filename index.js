@@ -8,6 +8,9 @@
   const PAGE_MANAGER = "ytd-page-manager#page-manager";
   const MINI_SIDEBAR = "ytd-mini-guide-renderer";
   const SIDEBAR_BURGER_TOGGLE = "yt-icon-button#guide-button";
+  const SHORTS_OVERLAYED =
+    'ytd-thumbnail-overlay-time-status-renderer[overlay-style="SHORTS"]';
+  const SHORTS_VIDEO = "ytd-item-section-renderer";
   const PLAYLIST_HEADER = "ytd-playlist-header-renderer";
 
   const HOMEPAGE_CHECKBOX = "homepage";
@@ -52,6 +55,8 @@
 
     ytdAppContainer?.style.setProperty(PERSISTENT_GUIDE_PADDING_STYLE, width);
   }
+
+  window.location.hash = "#";
 
   createToTopButton();
 })();
