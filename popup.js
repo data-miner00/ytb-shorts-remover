@@ -44,6 +44,8 @@ async function setValue(key, value) {
 }
 
 async function init() {
+  focusSearchInput();
+
   let results = await browser.storage.local.get(),
     homepage = results[HOMEPAGE_CHECKBOX],
     searchpage = results[SEARCHPAGE_CHECKBOX],
@@ -68,6 +70,10 @@ async function init() {
 
 function openInNewTab() {
   return browser.tabs.create({ url: "/popup.html" });
+}
+
+function focusSearchInput() {
+  document.querySelector('[name="youtube-search-input"]').focus();
 }
 
 init().catch(console.error);
