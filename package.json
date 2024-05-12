@@ -7,12 +7,12 @@
     "doc": "docs"
   },
   "scripts": {
-    "dev": "web-ext run"
+    "dev": "grunt watch",
+    "dev:firefox": "cd dist && web-ext run"
   },
   "keywords": [],
   "author": "",
   "license": "WTFPL",
-  "types": "./index.d.ts",
   "devDependencies": {
     "@types/firefox-webext-browser": "^120.0.3",
     "grunt": "^1.6.1",
