@@ -10,5 +10,5 @@ module.exports = function (grunt) {
   // Register tasks
   grunt.loadTasks("tasks");
 
-  grunt.registerTask("default", ["concat", "copy"]);
+  grunt.registerTask("default", ["concat", "copy", "compress"]);
 };
