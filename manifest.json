@@ -6,10 +6,10 @@
   "description": "Removes the distracting Youtube Shorts and Posts from Youtube.",
 
   "icons": {
-    "36": "icons/ytb-32x32.png",
-    "48": "icons/ytb-48x48.png",
-    "96": "icons/ytb-96x96.png",
-    "144": "icons/ytb-144x144.png"
+    "36": "ytb-32x32.png",
+    "48": "ytb-48x48.png",
+    "96": "ytb-96x96.png",
+    "144": "ytb-144x144.png"
   },
 
   "browser_specific_settings": {
@@ -29,7 +29,7 @@
   "browser_action": {
     "browser_style": true,
     "default_icon": {
-      "48": "icons/ytb-48x48.png"
+      "48": "ytb-48x48.png"
     },
     "default_title": "Youtube Shorts Remover",
     "default_popup": "popup.html"
