@@ -6,6 +6,7 @@
     "doc": "docs"
   },
   "scripts": {
+    "build": "grunt",
     "dev": "grunt watch",
     "dev:firefox": "cd dist && web-ext run"
   },
