@@ -10,5 +10,11 @@ module.exports = function (grunt) {
   // Register tasks
   grunt.loadTasks("tasks");
 
-  grunt.registerTask("default", ["concat", "copy", "cssmin", "compress"]);
+  grunt.registerTask("default", [
+    "concat",
+    "copy",
+    "jshint",
+    "cssmin",
+    "compress",
+  ]);
 };
