@@ -1,6 +1,6 @@
 {
   "name": "ytb-shorts-remover",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A Firefox browser extension to remove unwanted Youtube features, especially Shorts.",
   "directories": {
     "doc": "docs"
@@ -8,7 +8,7 @@
   "scripts": {
     "build": "grunt",
     "dev": "grunt watch",
-    "dev:firefox": "cd dist && web-ext run"
+    "dev:firefox": "grunt && cd dist && web-ext run"
   },
   "keywords": [
     "youtube",
