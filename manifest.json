@@ -8,8 +8,7 @@
   "icons": {
     "36": "ytb-32x32.png",
     "48": "ytb-48x48.png",
-    "96": "ytb-96x96.png",
-    "144": "ytb-144x144.png"
+    "96": "ytb-96x96.png"
   },
 
   "browser_specific_settings": {
